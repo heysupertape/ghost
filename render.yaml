@@ -9,6 +9,20 @@ services:
     envVars:
       - key: url
         value: https://www.supertape.com/new-blog
+      - key: mail__from
+        value: hey@supertape.com
+      - key: mail__transport
+        value: SMTP
+      - key: mail__options__service
+        value: Postmark
+      - key: mail__options__host
+        value: smtp.postmarkapp.com
+      - key: mail__options__port
+        value: 587
+      - key: mail__options__auth__user
+        sync: false
+      - key: mail__options__auth__pass
+        sync: false
       - key: database__client
         value: mysql
       - key: database__connection__host
