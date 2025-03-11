@@ -8,7 +8,7 @@ services:
       sizeGB: 10
     envVars:
       - key: url
-        value: https://www.supertape.com/ghost
+        value: https://www.supertape.com/new-blog
       - key: database__client
         value: mysql
       - key: database__connection__host
