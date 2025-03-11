@@ -2,9 +2,9 @@
 
 export default {
   async fetch(request) {
+    const req = new Request(request);
     const url = new URL(request.url);
-    const req = new Request(url.toString(), new Request(request));
-    req.headers.set("host", "ghost-l7kh.onrender.com");
-    return fetch(req);
+    url.hostname = "ghost-l7kh.onrender.com";
+    return await fetch(url, req);
   },
 };
