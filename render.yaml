@@ -2,12 +2,13 @@ services:
   - type: web
     name: ghost_web
     env: docker
-    autoDeploy: false
     disk:
       name: ghost
       mountPath: /var/lib/ghost/content
       sizeGB: 10
     envVars:
+      - key: url
+        value: https://www.supertape.com/blog-new
       - key: database__client
         value: mysql
       - key: database__connection__host
@@ -30,7 +31,6 @@ services:
     plan: standard
     env: docker
     repo: https://github.com/render-examples/mysql
-    autoDeploy: false
     disk:
       name: mysql
       mountPath: /var/lib/mysql
