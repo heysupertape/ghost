@@ -13,7 +13,7 @@ services:
       - key: database__connection__host
         fromService:
           type: pserv
-          name: mysql
+          name: ghost_image
           property: host
       - key: database__connection__database
         value: ghostdb
@@ -22,7 +22,7 @@ services:
       - key: database__connection__password
         fromService:
           type: pserv
-          name: mysql
+          name: ghost_image
           envVarKey: MYSQL_PASSWORD
 
   - type: pserv
